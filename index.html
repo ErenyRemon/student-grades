@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grades System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="controls">
+<button id="languageBtn" onclick="toggleLanguage()">English</button>
+<button id="themeBtn" onclick="toggleTheme()">🌙 Dark Mode</button>
+</div>
+
+<h1 id="title">نظام درجات الطلاب</h1>
+
+<!-- ================= MONTH 1 ================= -->
+<h2 data-en="Month 1" data-ar="الشهر الأول">الشهر الاول</h2>
+
+<div class="card">
+<h3 data-en="Evaluations" data-ar="التقييمات">التقييمات</h3>
+<label class="label-input"><span class="label-text" data-en="Evaluation 1" data-ar="التقييم 1">التقييم 1</span><input type="number" id="m1_e1"></label>
+<label class="label-input"><span class="label-text" data-en="Evaluation 2" data-ar="التقييم 2">التقييم 2</span><input type="number" id="m1_e2"></label>
+<label class="label-input"><span class="label-text" data-en="Evaluation 3" data-ar="التقييم 3">التقييم 3</span><input type="number" id="m1_e3"></label>
+<label class="label-input"><span class="label-text" data-en="Evaluation 4" data-ar="التقييم 4">التقييم 4</span><input type="number" id="m1_e4"></label>
+</div>
+
+<div class="card">
+<h3 data-en="Homework" data-ar="الواجبات">الواجبات</h3>
+<label class="label-input"><span class="label-text" data-en="Homework 1" data-ar="الواجب 1">الواجب 1</span><input type="number" id="m1_h1"></label>
+<label class="label-input"><span class="label-text" data-en="Homework 2" data-ar="الواجب 2">الواجب 2</span><input type="number" id="m1_h2"></label>
+<label class="label-input"><span class="label-text" data-en="Homework 3" data-ar="الواجب 3">الواجب 3</span><input type="number" id="m1_h3"></label>
+<label class="label-input"><span class="label-text" data-en="Homework 4" data-ar="الواجب 4">الواجب 4</span><input type="number" id="m1_h4"></label>
+<label class="label-input"><span class="label-text" data-en="Homework 5" data-ar="الواجب 5">الواجب 5</span><input type="number" id="m1_h5"></label>
+</div>
+
+<div class="card">
+<h3 data-en="Behavior" data-ar="السلوك">السلوك</h3>
+<label class="label-input"><span class="label-text" data-en="Behavior 1" data-ar="السلوك 1">السلوك 1</span><input type="number" id="m1_b1"></label>
+<label class="label-input"><span class="label-text" data-en="Behavior 2" data-ar="السلوك 2">السلوك 2</span><input type="number" id="m1_b2"></label>
+<label class="label-input"><span class="label-text" data-en="Behavior 3" data-ar="السلوك 3">السلوك 3</span><input type="number" id="m1_b3"></label>
+<label class="label-input"><span class="label-text" data-en="Behavior 4" data-ar="السلوك 4">السلوك 4</span><input type="number" id="m1_b4"></label>
+<label class="label-input"><span class="label-text" data-en="Behavior 5" data-ar="السلوك 5">السلوك 5</span><input type="number" id="m1_b5"></label>
+</div>
+
+<button onclick="month1Result()">Month 1 Result</button>
+<div id="result1"></div>
+
+<hr>
+
+<!-- ================= MONTH 2 ================= -->
+<h2 data-en="Month 2" data-ar="الشهر الثاني">الشهر الثاني</h2>
+
+<div class="card">
+<h3 data-en="Evaluations" data-ar="التقييمات">التقييمات</h3>
+<label class="label-input"><span class="label-text" data-en="Evaluation 1" data-ar="التقييم 1">التقييم 1</span><input type="number" id="m2_e1"></label>
+<label class="label-input"><span class="label-text" data-en="Evaluation 2" data-ar="التقييم 2">التقييم 2</span><input type="number" id="m2_e2"></label>
+<label class="label-input"><span class="label-text" data-en="Evaluation 3" data-ar="التقييم 3">التقييم 3</span><input type="number" id="m2_e3"></label>
+</div>
+
+<div class="card">
+<h3 data-en="Homework" data-ar="الواجبات"> الواجبات</h3>
+<label class="label-input"><span class="label-text" data-en="Homework 1" data-ar="الواجب 1">الواجب 1</span><input type="number" id="m2_h1"></label>
+<label class="label-input"><span class="label-text" data-en="Homework 2" data-ar="الواجب 2">الواجب 2</span><input type="number" id="m2_h2"></label>
+<label class="label-input"><span class="label-text" data-en="Homework 3" data-ar="الواجب 3">الواجب 3</span><input type="number" id="m2_h3"></label>
+<label class="label-input"><span class="label-text" data-en="Homework 4" data-ar="الواجب 4">الواجب 4</span><input type="number" id="m2_h4"></label>
+<label class="label-input"><span class="label-text" data-en="Homework 5" data-ar="الواجب 5">الواجب 5</span><input type="number" id="m2_h5"></label>
+</div>
+
+<div class="card">
+<h3 data-en="Behavior" data-ar="السلوك"> السلوك</h3>
+<label class="label-input"><span class="label-text" data-en="Behavior 1" data-ar="السلوك 1">السلوك 1</span><input type="number" id="m2_b1"></label>
+<label class="label-input"><span class="label-text" data-en="Behavior 2" data-ar="السلوك 2">السلوك 2</span><input type="number" id="m2_b2"></label>
+<label class="label-input"><span class="label-text" data-en="Behavior 3" data-ar="السلوك 3">السلوك 3</span><input type="number" id="m2_b3"></label>
+<label class="label-input"><span class="label-text" data-en="Behavior 4" data-ar="السلوك 4">السلوك 4</span><input type="number" id="m2_b4"></label>
+<label class="label-input"><span class="label-text" data-en="Behavior 5" data-ar="السلوك 5">السلوك 5</span><input type="number" id="m2_b5"></label>
+</div>
+
+<button onclick="month2Result()">Month 2 Result</button>
+<div id="result2"></div>
+
+<hr>
+
+<!-- ================= MONTH 3 ================= -->
+<h2 data-en="Month 3" data-ar="الشهر الثالث">الشهر الثالث</h2>
+
+<div class="card">
+<h3 data-en="Evaluations" data-ar="التقييمات"> التقييمات</h3>
+<label class="label-input"><span class="label-text" data-en="Evaluation 1" data-ar="التقييم 1">التقييم 1</span><input type="number" id="m3_e1"></label>
+<label class="label-input"><span class="label-text" data-en="Evaluation 2" data-ar="التقييم 2">التقييم 2</span><input type="number" id="m3_e2"></label>
+</div>
+
+<div class="card">
+<h3 data-en="Homework" data-ar="الواجبات"> الواجبات</h3>
+<label class="label-input"><span class="label-text" data-en="Homework 1" data-ar="الواجب 1">الواجب 1</span><input type="number" id="m3_h1"></label>
+<label class="label-input"><span class="label-text" data-en="Homework 2" data-ar="الواجب 2">الواجب 2</span><input type="number" id="m3_h2"></label>
+<label class="label-input"><span class="label-text" data-en="Homework 3" data-ar="الواجب 3">الواجب 3</span><input type="number" id="m3_h3"></label>
+<label class="label-input"><span class="label-text" data-en="Homework 4" data-ar="الواجب 4">الواجب 4</span><input type="number" id="m3_h4"></label>
+</div>
+
+<div class="card">
+<h3 data-en="Behavior" data-ar="السلوك">السلوك</h3>
+<label class="label-input"><span class="label-text" data-en="Behavior 1" data-ar="السلوك 1">السلوك 1</span><input type="number" id="m3_b1"></label>
+<label class="label-input"><span class="label-text" data-en="Behavior 2" data-ar="السلوك 2">السلوك 2</span><input type="number" id="m3_b2"></label>
+<label class="label-input"><span class="label-text" data-en="Behavior 3" data-ar="السلوك 3">السلوك 3</span><input type="number" id="m3_b3"></label>
+<label class="label-input"><span class="label-text" data-en="Behavior 4" data-ar="السلوك 4">السلوك 4</span><input type="number" id="m3_b4"></label>
+</div>
+
+<button onclick="month3Result()">Month 3 Result</button>
+<div id="result3"></div>
+
+<hr>
+
+<!-- ================= FINAL ================= -->
+<h2 data-en="Final Result" data-ar="النتيجة النهائية">النتيجة النهائية</h2>
+
+<div class="card">
+<h3 data-en="Month 1 Total Grades" data-ar="مجموع درجات الشهر الأول">مجموع درجات الشهر الأول</h3>
+<label class="label-input"><span class="label-text" data-en="Enter Month 1 Total" data-ar="أدخل مجموع درجات الشهر الأول">أدخل مجموع درجات الشهر الأول</span><input type="number" id="month1Total" ></label>
+</div>
+
+<div class="card">
+<h3 data-en="Month 2 Total Grades" data-ar="مجموع درجات الشهر الثاني">مجموع درجات الشهر الثاني</h3>
+<label class="label-input"><span class="label-text" data-en="Enter Month 2 Total" data-ar="أدخل مجموع درجات الشهر الثاني">أدخل مجموع درجات الشهر الثاني</span><input type="number" id="month2Total" ></label>
+</div>
+
+<div class="card">
+<h3 data-en="Month 3 Total Grades" data-ar="مجموع درجات الشهر الثالث">مجموع درجات الشهر الثالث</h3>
+<label class="label-input"><span class="label-text" data-en="Enter Month 3 Total" data-ar="أدخل مجموع درجات الشهر الثالث">أدخل مجموع درجات الشهر الثالث</span><input type="number" id="month3Total" ></label>
+</div>
+
+<div class="card">
+<h3 data-en="Total 14 Weeks Grades" data-ar="مجموع درجات الـ 14 أسبوع">مجموع درجات الـ 14 أسبوع</h3>
+<div id="total14Weeks" class="result-display"></div>
+</div>
+
+<div class="card">
+<h3 data-en="Average 14 Weeks Grades" data-ar="متوسط مجموع درجات الـ 14 أسبوع">متوسط مجموع درجات الـ 14 أسبوع</h3>
+<label class="label-input"><span class="label-text" data-en="Enter Average 14 Weeks" data-ar="أدخل متوسط درجات الـ 14 أسبوع">أدخل متوسط درجات الـ 14 أسبوع</span><input type="number" id="average14Weeks"></label>
+</div>
+
+<div class="card">
+<h3 data-en="Month 1 Exam" data-ar="امتحان الشهر الأول">امتحان الشهر الأول</h3>
+<label class="label-input"><span class="label-text" data-en="Enter Month 1 Exam Grade" data-ar="أدخل درجة امتحان الشهر الأول">أدخل درجة امتحان الشهر الأول</span><input type="number" id="exam1" ></label>
+</div>
+
+<div class="card">
+<h3 data-en="Month 2 Exam" data-ar="امتحان الشهر الثاني">امتحان الشهر الثاني</h3>
+<label class="label-input"><span class="label-text" data-en="Enter Month 2 Exam Grade" data-ar="أدخل درجة امتحان الشهر الثاني">أدخل درجة امتحان الشهر الثاني</span><input type="number" id="exam2" ></label>
+</div>
+
+<button onclick="finalResult()">احسب النتيجة النهائية</button>
+<div id="finalResult"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
