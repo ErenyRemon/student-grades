@@ -120,7 +120,7 @@ body.dark .label-text {
 }
 
 button {
-    width: 100%;
+    width: 20%;
     padding: 14px;
     background: #007bff;
     color: white;
@@ -134,6 +134,7 @@ button {
 
 button:hover {
     background: #0056b3;
+
 }
 
 #result1, #result2, #result3, #finalResult {
@@ -173,7 +174,6 @@ hr {
 body.dark hr {
     border-top-color: #555;
 }
-
 .footer{
     display: flex;
     justify-content: center;
@@ -309,5 +309,136 @@ body.dark hr {
     #result1, #result2, #result3, #finalResult {
         padding: 12px;
         font-size: 14px;
+    }
+}
+
+/* Tab Styles */
+.tab-container {
+    margin-top: 20px;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: #666;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+    flex-shrink: 0;
+}
+
+
+.tab-button.active {
+    color: #007bff;
+    border-bottom-color: #007bff;
+}
+
+.tab-button:hover {
+    color: #ffffff;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+body.dark .tab-button {
+    color: #ccc;
+}
+
+body.dark .tab-button.active {
+    color: #007bff;
+}
+
+body.dark .tab-buttons {
+    border-bottom-color: #555;
+}
+
+.result-button{
+    width: 30%;
+}
+
+/* Responsive Tabs */
+@media (max-width: 768px) {
+    .tab-buttons {
+        flex-direction: column;
+        align-items: center;
+        border-bottom: none;
+        border-right: 2px solid #ddd;
+        overflow-x: visible;
+        margin-bottom: 10px;
+        padding: 0;
+    }
+
+    body.dark .tab-buttons {
+        border-right-color: #555;
+        border-bottom: none;
+    }
+
+    .tab-button {
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+        border-right: 3px solid transparent;
+        margin: 0;
+        padding: 12px;
+        font-size: 16px;
+        width: 100%;
+        /* max-width: 200px; */
+    }
+
+    .tab-button.active {
+        border-right-color: #007bff;
+        border-bottom-color: transparent;
+    }
+
+    body.dark .tab-button {
+        border-bottom-color: #555;
+    }
+}
+
+@media (max-width: 480px) {
+    .tab-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        border-bottom: none;
+        border-right: 2px solid #ddd;
+        margin-bottom: 10px;
+        overflow-x: visible;
+    }
+
+    body.dark .tab-buttons {
+        border-right-color: #555;
+        border-bottom: none;
+    }
+
+    .tab-button {
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+        border-right: 3px solid transparent;
+        margin: 0;
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .tab-button.active {
+        border-right-color: #007bff;
+        border-bottom-color: transparent;
+    }
+
+    body.dark .tab-button {
+        border-bottom-color: #555;
     }
 }
