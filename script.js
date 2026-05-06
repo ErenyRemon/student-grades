@@ -63,6 +63,27 @@ const translations = {
     }
 };
 
+function openTab(tabName, button) {
+    // Hide all tab contents
+    const tabContents = document.querySelectorAll('.tab-content');
+    tabContents.forEach(content => {
+        content.style.display = 'none';
+        content.classList.remove('active');
+    });
+
+    // Remove active class from all tab buttons
+    const tabButtons = document.querySelectorAll('.tab-button');
+    tabButtons.forEach(btn => btn.classList.remove('active'));
+
+    // Show the selected tab content
+    const selectedTab = document.getElementById(tabName);
+    selectedTab.style.display = 'block';
+    selectedTab.classList.add('active');
+
+    // Add active class to the clicked button
+    button.classList.add('active');
+}
+
 function toggleLanguage() {
     isArabic = !isArabic;
     updateLanguage();
@@ -87,6 +108,12 @@ function updateLanguage() {
     const h2Elements = document.querySelectorAll('h2[data-en]');
     h2Elements.forEach(h2 => {
         h2.innerHTML = isArabic ? h2.dataset.ar : h2.dataset.en;
+    });
+
+    // Update tab buttons
+    const tabButtons = document.querySelectorAll('.tab-button');
+    tabButtons.forEach(button => {
+        button.innerHTML = isArabic ? button.dataset.ar : button.dataset.en;
     });
 
     // Update h3 headings (categories like Evaluations, Homework, Behavior)
