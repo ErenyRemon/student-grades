@@ -368,9 +368,12 @@ body.dark .tab-buttons {
 }
 
 .result-button{
-    width: 30%;
+    width: 50%;
 }
-
+.div-result-button{
+    display: flex;
+    justify-content: center;
+}
 /* Responsive Tabs */
 @media (max-width: 768px) {
     .tab-buttons {
